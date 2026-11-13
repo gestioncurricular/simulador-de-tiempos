@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#00205B">
+<meta name="application-version" content="2026-11-13-tiempos-comision">
 <meta name="description" content="Calculadora de tiempos de gestión curricular para programas nuevos, modificaciones y renovaciones de registro calificado. Universidad de La Sabana.">
 <title>Simulador de tiempos | Gestión Curricular · Universidad de La Sabana</title>
 <style>
@@ -17,14 +18,14 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
 .topbar{background:#fff;border-bottom:1px solid var(--line)}.topbar-inner{min-height:94px;display:flex;justify-content:flex-start;align-items:center;gap:24px}.university{display:flex;align-items:center;gap:24px;min-width:0}.brand-logo{display:block;width:224px;height:auto;max-width:100%;object-fit:contain;flex:none}.brand-divider{height:36px;width:1px;background:#d7dfeb;flex:none}.unit-name{font-weight:700;color:#495f7b;font-size:13px;white-space:nowrap}
 .hero{background:#fff;border-bottom:1px solid var(--line)}.hero-inner{padding:28px 0 30px}.eyebrow{font-size:11px;color:#5f7695;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}.hero h1{font-size:clamp(27px,3vw,36px);line-height:1.2;letter-spacing:-.035em;font-weight:800;color:var(--navy);margin:0 0 8px}.hero .lead{font-size:14px;color:#60758f;margin:0}
 .main{padding-top:25px;padding-bottom:30px}.card{background:white;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius)}.section-kicker{font-size:10px;font-weight:850;color:#627996;letter-spacing:.11em;margin-bottom:7px}.section-title{font-size:17px;letter-spacing:-.025em;margin:0;line-height:1.35;font-weight:800}.subline:empty{display:none}
-.type-card{padding:21px 24px 23px;margin-bottom:18px}.type-head{margin-bottom:15px}.process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.type-option{border-radius:12px;border:1px solid #dfe7f0;background:#fff;text-align:left;display:flex;gap:12px;align-items:center;padding:14px 15px;min-width:0;position:relative;transition:background .15s,border-color .15s}.type-option:hover{border-color:#91aacb;background:#fafcff}.type-option[aria-pressed=true]{background:#edf4ff;border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}.type-option[aria-pressed=true]:after{content:"✓";position:absolute;top:9px;right:11px;background:var(--navy);width:18px;height:18px;border-radius:50%;color:#fff;display:grid;place-items:center;font-size:11px;font-weight:800}.type-icon{flex:none;width:39px;height:39px;border-radius:10px;display:grid;place-items:center;background:#eff4fb;color:var(--navy)}.type-icon svg{width:22px;height:22px}.type-info{min-width:0}.type-info strong{display:block;font-weight:800;font-size:13px;padding-right:18px}.type-info small{display:block;color:#72839a;font-size:11px;margin-top:3px}
+.type-card{padding:21px 24px 23px;margin-bottom:18px}.type-head{margin-bottom:15px}.process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.type-option{border-radius:12px;border:1px solid #dfe7f0;background:#fff;text-align:left;display:flex;gap:12px;align-items:center;padding:14px 15px;min-width:0;position:relative;transition:background .15s,border-color .15s}.type-option:hover{border-color:#91aacb;background:#fafcff}.type-option[aria-pressed=true]{background:#edf4ff;border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}.type-option[aria-pressed=true]:after{content:"✓";position:absolute;top:9px;right:11px;background:var(--navy);width:18px;height:18px;border-radius:50%;color:#fff;display:grid;place-items:center;font-size:11px;font-weight:800}.type-icon{flex:none;width:46px;height:46px;border:1px solid #dfebfa;border-radius:12px;display:grid;place-items:center;background:#eff4fb;color:var(--navy)}.type-option[aria-pressed=true] .type-icon{background:#dfeafb;border-color:#c5d8f4}.type-icon svg{width:26px;height:26px;display:block;overflow:visible}.type-info{min-width:0}.type-info strong{display:block;font-weight:800;font-size:13px;padding-right:18px}.type-info small{display:block;color:#72839a;font-size:11px;margin-top:3px}
 .columns{display:grid;grid-template-columns:minmax(330px,405px) minmax(0,1fr);gap:18px;align-items:start;margin-bottom:18px}.settings{position:static;padding:23px 24px;min-width:0}.settings-head{padding-bottom:14px;border-bottom:1px solid var(--line)}.group{margin-top:18px}.fieldlabel{font-size:12px;font-weight:750;color:#344a68;display:block;margin-bottom:8px}.segmented{display:grid;grid-template-columns:repeat(2,1fr);background:#eef2f8;padding:4px;border-radius:10px;gap:4px}.segmented button{border:0;border-radius:8px;background:transparent;color:#667a95;min-height:40px;font-size:12px;font-weight:750}.segmented button[aria-pressed=true]{background:white;color:var(--navy);box-shadow:0 1px 5px rgba(0,32,91,.09)}.field{display:block;width:100%;height:43px;background:white;border:1px solid #d4dfec;border-radius:9px;padding:0 11px;color:var(--ink)}.progress-fields{margin-top:15px;padding:1px 0 0 14px;border-left:3px solid #c8d9ef}.progress-fields .group{margin-top:10px;margin-bottom:12px}.sliderline{display:flex;align-items:center;justify-content:space-between;gap:10px}.sliderline .fieldlabel{margin-bottom:0}.percentage{background:#edf4ff;border-radius:7px;padding:3px 9px;font-weight:800;font-size:12px;color:var(--navy)}input[type=range]{width:100%;accent-color:var(--navy);margin:13px 0 4px}.range-axis{display:flex;justify-content:space-between;color:#8e9db1;font-size:10px}.scenario-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.scenario-btn{min-height:62px;padding:8px 3px;text-align:center;border:1px solid #dfe6f0;background:white;border-radius:9px;color:#748399}.scenario-btn strong{font-size:11px;font-weight:750;display:block;color:#42556f}.scenario-btn small{font-size:10px}.scenario-btn[aria-pressed=true]{border-color:var(--navy);background:#eff5ff}.scenario-btn[aria-pressed=true] strong{color:var(--navy)}.settings-divider{height:1px;background:var(--line);margin:21px 0 16px}.buttons{display:flex;flex-direction:column;gap:8px}.button-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}.button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:9px 12px;background:white;color:#29486d;border:1px solid #d7e1ee;border-radius:9px;font-size:12px;font-weight:750}.button svg{width:16px;height:16px}.button:hover{background:#f4f8fc}.button.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.button.primary:hover{background:#0d397a}.reset{display:block;border:0;background:none;color:#6d7c92;text-decoration:underline;text-underline-offset:3px;margin:10px auto 0;font-size:11px;padding:5px}.status{color:var(--green);font-size:11px;margin:7px 0 0;min-height:0}.status:empty{display:none}.hidden{display:none!important}
-.results{min-width:0}.result-main{overflow:hidden}.result-banner{background:var(--navy);color:#fff;padding:30px 29px 27px}.result-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.result-label{font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#d5e1f6}.result-tag{font-size:10px;border:1px solid #4e6796;border-radius:30px;padding:5px 10px;color:#eaf2ff;white-space:nowrap}.result-date{font-size:clamp(30px,3.2vw,41px);line-height:1.2;font-weight:850;letter-spacing:-.04em;margin:21px 0 9px}.result-sub{font-size:12px;color:#c9d8ed;margin:0}.result-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:24px 14px;gap:0}.metric{padding:0 15px;min-width:0}.metric:not(:first-child){border-left:1px solid var(--line)}.metric-label{font-size:11px;color:#6b7e98;display:block}.metric strong{display:block;font-size:clamp(23px,2.8vw,34px);line-height:1.32;color:var(--navy);font-weight:850;letter-spacing:-.04em;margin-top:4px}.metric small{font-size:10px;color:#8896a8}.overall{border-top:1px solid var(--line);padding:20px 29px 23px}.overall-line{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#6c7f99;margin-bottom:10px}.overall-line strong{color:#324c6b}.progressbar{height:9px;background:#e7eef7;border-radius:9px;overflow:hidden}.progressbar>div{height:100%;width:0;background:#164c9b;border-radius:9px;transition:width .16s ease}.insight{margin-top:20px;display:flex;align-items:center;gap:10px;padding:13px 14px;background:#f1f6fd;border-radius:10px}.insight-icon{display:grid;place-items:center;width:26px;height:26px;flex:none;background:#e0eafa;color:var(--navy);border-radius:8px;font-size:15px;font-weight:800}.insight p{margin:0;font-size:12px;color:#546c8a}.insight strong{color:var(--navy)}
+.results{min-width:0}.result-main{overflow:hidden}.result-banner{background:var(--navy);color:#fff;padding:30px 29px 27px}.result-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.result-label{font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#d5e1f6}.result-tag{font-size:10px;border:1px solid #4e6796;border-radius:30px;padding:5px 10px;color:#eaf2ff;white-space:nowrap}.result-date{font-size:clamp(30px,3.2vw,41px);line-height:1.2;font-weight:850;letter-spacing:-.04em;margin:21px 0 9px}.result-sub{font-size:12px;color:#c9d8ed;margin:0}.result-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:24px 14px;gap:0}.metric{padding:0 15px;min-width:0}.metric:not(:first-child){border-left:1px solid var(--line)}.metric-label{font-size:11px;color:#6b7e98;display:block}.metric strong{display:block;font-size:clamp(18px,1.9vw,24px);line-height:1.25;color:var(--navy);font-weight:850;letter-spacing:-.035em;margin-top:6px;overflow-wrap:normal}.metric small{font-size:10px;color:#8896a8}.overall{border-top:1px solid var(--line);padding:20px 29px 23px}.overall-line{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#6c7f99;margin-bottom:10px}.overall-line strong{color:#324c6b}.progressbar{height:9px;background:#e7eef7;border-radius:9px;overflow:hidden}.progressbar>div{height:100%;width:0;background:#164c9b;border-radius:9px;transition:width .16s ease}.insight{margin-top:20px;display:flex;align-items:center;gap:10px;padding:13px 14px;background:#f1f6fd;border-radius:10px}.insight-icon{display:grid;place-items:center;width:26px;height:26px;flex:none;background:#e0eafa;color:var(--navy);border-radius:8px;font-size:15px;font-weight:800}.insight p{margin:0;font-size:12px;color:#546c8a}.insight strong{color:var(--navy)}
 .timeline{overflow:hidden}.section-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:22px 25px 18px}.section-head h2{margin:0;font-size:19px;letter-spacing:-.025em}.section-head p{font-size:12px;color:#73859d;margin:5px 0 0}.count-pill{border:1px solid var(--line);border-radius:22px;padding:6px 12px;font-size:11px;font-weight:800;color:#466180;white-space:nowrap}.route-visual{height:8px;display:flex;gap:2px;margin:0 25px 20px;overflow:hidden;border-radius:6px;background:#e8eff7}.segment{height:100%;min-width:2px;background:#9dbbe4}.segment.done{background:#cbd6e3}.segment.now{background:var(--navy)}.segment.partial{background:linear-gradient(to right,#cbd6e3 var(--percent),var(--navy) var(--percent))}.route-head{display:grid;grid-template-columns:minmax(0,1fr) 165px 150px;gap:10px;padding:11px 25px;background:#f8fafd;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:10px;font-weight:800;letter-spacing:.05em;color:#70849e;text-transform:uppercase}.route-head span:nth-child(n+2){text-align:right}.stage-list{margin:0;padding:0;list-style:none}.stage-row{border:0;border-bottom:1px solid #edf1f6;background:white;color:inherit;display:grid;grid-template-columns:32px minmax(0,1fr) 165px 150px;align-items:center;gap:10px;width:100%;text-align:left;padding:14px 25px;transition:background .13s}.stage-list li:last-child .stage-row{border-bottom:0}.stage-row:hover{background:#f5f9ff}.stage-row[data-status=current]{background:#f5f8ff}.stage-row[data-status=current]:hover{background:#edf4ff}.step-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#edf3fb;color:#396297;font-size:10px;font-weight:800}.stage-row[data-status=done] .step-icon{background:#eff3f7;color:#71849a}.stage-row[data-status=current] .step-icon{color:white;background:var(--navy)}.step-name{font-size:13px;font-weight:750;line-height:1.32;display:block}.stage-state{display:block;font-size:11px;color:#8a99ae;margin-top:3px}.stage-row[data-status=current] .stage-state{color:var(--navy);font-weight:750}.step-duration,.step-date{text-align:right;font-size:12px;font-weight:750;color:#425c7d}.step-duration small,.step-date small{display:block;font-size:10px;color:#8a9ab0;font-weight:500;margin-top:2px}.stage-row[data-status=done] .step-name{color:#7a8a9e}
 .method-note{border:1px solid var(--line);background:#fff;border-radius:12px;padding:0 18px;margin:17px 0 0;color:#526982}.method-note summary{padding:14px 2px;cursor:pointer;font-weight:750;font-size:12px;user-select:none}.method-note p{border-top:1px solid #edf1f6;margin:0;padding:12px 2px 16px;font-size:12px;line-height:1.7}.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:11px;color:#71839c;padding:5px 0 28px}.foot a{color:#536d91;text-decoration:none}.foot a:hover{text-decoration:underline}.separator{color:#a2aebe}
 @media(max-width:1040px){.columns{grid-template-columns:minmax(300px,360px) minmax(0,1fr)}.result-metrics{padding:21px 5px}.metric{padding:0 10px}.route-head{grid-template-columns:minmax(0,1fr) 120px 125px}.stage-row{grid-template-columns:30px minmax(0,1fr) 120px 125px}}
 @media(max-width:760px){.wrap{width:calc(100% - 32px)}.topbar-inner{min-height:83px}.brand-logo{width:184px}.unit-name{white-space:normal;font-size:11px}.columns{grid-template-columns:1fr}.process-grid{gap:7px}.type-option{padding:12px 10px;gap:6px;flex-direction:column;align-items:flex-start}.type-option[aria-pressed=true]:after{top:8px;right:8px}.type-info strong{font-size:12px}.type-info small{font-size:10px}.settings{padding:22px}.result-banner{padding:28px 25px}.timeline{margin-top:0}}
-@media(max-width:510px){.wrap{width:calc(100% - 26px)}.topbar-inner{min-height:75px}.brand-logo{width:178px}.brand-divider{display:none}.unit-name{display:none}.hero-inner{padding:24px 0}.hero h1{font-size:27px}.hero .lead{font-size:13px}.main{padding-top:16px}.type-card{padding:18px 15px}.type-head{margin-bottom:12px}.process-grid{grid-template-columns:1fr;gap:8px}.type-option{flex-direction:row;align-items:center;padding:10px 12px;gap:11px}.type-icon{width:36px;height:36px}.type-info strong{font-size:13px}.type-info small{font-size:11px}.settings{padding:20px 18px}.result-banner{padding:25px 20px}.result-top{flex-wrap:wrap;gap:8px}.result-date{font-size:31px}.result-metrics{padding:18px 8px}.metric{padding:0 8px}.metric-label{font-size:10px}.metric strong{font-size:24px}.metric small{font-size:9px}.overall{padding:19px 20px}.section-head{padding:20px 16px 16px}.route-visual{margin:0 16px 16px}.route-head{grid-template-columns:minmax(0,1fr) 95px;padding:10px 14px}.route-head span:nth-child(2){display:none}.stage-row{grid-template-columns:28px minmax(0,1fr) 95px;gap:9px;padding:13px 14px}.step-duration{display:none}.step-date{font-size:11px}.step-name{font-size:12px}.step-date small{font-size:9px}.section-head h2{font-size:17px}.section-head p{font-size:11px}.count-pill{font-size:10px;padding:5px 8px}.foot{padding-bottom:22px}}
+@media(max-width:510px){.wrap{width:calc(100% - 26px)}.topbar-inner{min-height:75px}.brand-logo{width:178px}.brand-divider{display:none}.unit-name{display:none}.hero-inner{padding:24px 0}.hero h1{font-size:27px}.hero .lead{font-size:13px}.main{padding-top:16px}.type-card{padding:18px 15px}.type-head{margin-bottom:12px}.process-grid{grid-template-columns:1fr;gap:8px}.type-option{flex-direction:row;align-items:center;padding:10px 12px;gap:11px}.type-icon{width:42px;height:42px}.type-info strong{font-size:13px}.type-info small{font-size:11px}.settings{padding:20px 18px}.result-banner{padding:25px 20px}.result-top{flex-wrap:wrap;gap:8px}.result-date{font-size:31px}.result-metrics{padding:18px 8px}.metric{padding:0 8px}.metric-label{font-size:10px}.metric strong{font-size:clamp(15px,4vw,19px);line-height:1.25}.metric small{font-size:9px}.overall{padding:19px 20px}.section-head{padding:20px 16px 16px}.route-visual{margin:0 16px 16px}.route-head{grid-template-columns:minmax(0,1fr) 95px;padding:10px 14px}.route-head span:nth-child(2){display:none}.stage-row{grid-template-columns:28px minmax(0,1fr) 95px;gap:9px;padding:13px 14px}.step-duration{display:none}.step-date{font-size:11px}.step-name{font-size:12px}.step-date small{font-size:9px}.section-head h2{font-size:17px}.section-head p{font-size:11px}.count-pill{font-size:10px;padding:5px 8px}.foot{padding-bottom:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
 @media print{@page{size:A4;margin:13mm}body{background:#fff;font-size:11px}.brand-strip,.hero,.type-card,.settings,.method-note,.foot a{display:none!important}.wrap{width:100%}.topbar-inner{min-height:60px}.brand-logo{width:180px}.main{padding-top:14px}.columns{display:block;margin-bottom:12px}.card{box-shadow:none;break-inside:avoid}.result-banner,.route-visual,.segment,.progressbar>div{-webkit-print-color-adjust:exact;print-color-adjust:exact}.result-banner{padding:17px 23px}.result-date{font-size:27px;margin:10px 0}.result-metrics{padding:12px 18px}.overall{padding:12px 22px}.insight{display:none}.stage-row{padding:7px 15px;break-inside:avoid}.section-head{padding:11px 15px}.route-head{padding:7px 15px}.route-visual{margin:0 15px 10px}.foot{display:block;padding:10px 0 0}}
 
@@ -49,7 +50,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
   .print-metric{padding:3mm 4mm;min-height:16mm}
   .print-metric+.print-metric{border-left:1px solid #dbe5f1}
   .print-metric-label{font-size:9px;color:#687c98;display:block}
-  .print-metric strong{display:inline-block;font-size:20px;color:#00205b;line-height:1.1;margin-top:1mm}
+  .print-metric strong{display:inline-block;font-size:16px;color:#00205b;line-height:1.1;margin-top:1mm}
   .print-metric small{display:block;font-size:8px;color:#74859b}
   .print-facts{display:grid;grid-template-columns:1fr 1fr;gap:2mm 7mm;margin:0 1mm 4mm}
   .print-fact{font-size:10px;display:flex;align-items:baseline;gap:2mm;min-width:0}
@@ -61,8 +62,8 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
   .print-stage-table{border-collapse:collapse;table-layout:fixed;width:100%;font-size:9px;line-height:1.22}
   .print-stage-table th{background:#eef3fa!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;color:#415c7b;text-transform:uppercase;letter-spacing:.02em;font-size:8px;text-align:left;padding:2.5mm 2mm}
   .print-stage-table th:nth-child(n+2),.print-stage-table td:nth-child(n+2){text-align:right}
-  .print-stage-table td{padding:2.7mm 2mm;border-bottom:1px solid #e7edf4;vertical-align:middle}
-  .print-stage-table th:nth-child(1){width:43%}.print-stage-table th:nth-child(2){width:18%}.print-stage-table th:nth-child(3){width:18%}.print-stage-table th:nth-child(4){width:21%}
+  .print-stage-table td{padding:2.3mm 2mm;border-bottom:1px solid #e7edf4;vertical-align:middle}
+  .print-stage-table th:nth-child(1){width:39%}.print-stage-table th:nth-child(2){width:18%}.print-stage-table th:nth-child(3){width:23%}.print-stage-table th:nth-child(4){width:20%}
   .print-stage-table tr{break-inside:avoid;page-break-inside:avoid}
   .print-stage-table tr.past td{color:#8191a6}
   .print-stage-table tr.active td:first-child{font-weight:700;color:#00205b}
@@ -84,9 +85,9 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
   <section class="card type-card" aria-labelledby="process-title">
     <div class="type-head"><div><div class="section-kicker">TIPO DE TRÁMITE</div><h2 class="section-title" id="process-title">Selecciona el tipo de trámite</h2></div></div>
     <div class="process-grid" id="types">
-      <button type="button" class="type-option" data-type="nuevo" aria-pressed="true"><span class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 4v16M4 12h16"/><circle cx="12" cy="12" r="9" stroke-dasharray="1 32"/></svg></span><span class="type-info"><strong>Programa nuevo</strong><small>10 etapas · 331 días de referencia</small></span></button>
-      <button type="button" class="type-option" data-type="modificacion" aria-pressed="false"><span class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 19h16M7 15.5 17 5.5l2 2-10 10H7v-2Z"/><path d="m15 7 2 2"/></svg></span><span class="type-info"><strong>Modificación</strong><small>5 etapas · 166 días de referencia</small></span></button>
-      <button type="button" class="type-option" data-type="renovacion" aria-pressed="false"><span class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.7 10A7 7 0 0 1 18 7l2 5M4 12l2 5a7 7 0 0 0 12.3-3"/></svg></span><span class="type-info"><strong>Renovación</strong><small>4 etapas · 181 días de referencia</small></span></button>
+      <button type="button" class="type-option" data-type="nuevo" aria-pressed="true"><span class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.5" y="2.75" width="15" height="18.5" rx="2.4"/><path d="M12 8.5v7M8.5 12h7"/></svg></span><span class="type-info"><strong>Programa nuevo</strong><small>11 etapas · 11 meses y 2 días</small></span></button>
+      <button type="button" class="type-option" data-type="modificacion" aria-pressed="false"><span class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.5 3H6.5A2.5 2.5 0 0 0 4 5.5v13A2.5 2.5 0 0 0 6.5 21H15"/><path d="M8 8h8M8 12h4"/><path d="m12.75 17.2 6.4-6.4a1.7 1.7 0 0 1 2.4 2.4l-6.4 6.4-3.65.95.95-3.35Z"/></svg></span><span class="type-info"><strong>Modificación</strong><small>6 etapas · 5 meses y 17 días</small></span></button>
+      <button type="button" class="type-option" data-type="renovacion" aria-pressed="false"><span class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10a8.2 8.2 0 0 0-14.25-3.4L3.5 9"/><path d="M3.5 4.75V9H8"/><path d="M4 14a8.2 8.2 0 0 0 14.25 3.4L20.5 15"/><path d="M20.5 19.25V15H16"/></svg></span><span class="type-info"><strong>Renovación</strong><small>5 etapas · 6 meses y 2 días</small></span></button>
     </div>
   </section>
   <div class="columns">
@@ -113,7 +114,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
     <div class="results" aria-label="Resultado de la proyección">
       <section class="card result-main" aria-labelledby="result-heading">
         <div class="result-banner"><div class="result-top"><span class="result-label" id="result-heading">Fecha estimada de radicación</span><span class="result-tag" id="scenarioTag">Escenario estándar</span></div><div class="result-date" id="estimatedDate" aria-live="polite">—</div><p class="result-sub" id="resultSub">Proyección orientativa</p></div>
-        <div class="result-metrics"><div class="metric"><span class="metric-label">Tiempo pendiente</span><strong id="daysLeft">—</strong><small>días calendario</small></div><div class="metric"><span class="metric-label">Tiempo desde cero</span><strong id="daysTotal">—</strong><small>días de referencia</small></div><div class="metric"><span class="metric-label">Avance global</span><strong id="globalProgress">—</strong><small>del proceso</small></div></div>
+        <div class="result-metrics"><div class="metric"><span class="metric-label">Tiempo pendiente</span><strong id="daysLeft">—</strong><small>según escenario elegido</small></div><div class="metric"><span class="metric-label">Tiempo desde cero</span><strong id="daysTotal">—</strong><small>duración base del trámite</small></div><div class="metric"><span class="metric-label">Avance global</span><strong id="globalProgress">—</strong><small>del proceso</small></div></div>
         <div class="overall"><div class="overall-line"><strong id="progressLead">0 % completado</strong><span id="stepsLead">10 etapas pendientes</span></div><div class="progressbar" role="progressbar" aria-label="Avance global del trámite" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="globalProgressBar"><div id="globalProgressFill"></div></div><div class="insight"><span class="insight-icon" aria-hidden="true">↗</span><p id="insightText">La proyección se calcula desde la primera etapa del proceso.</p></div></div>
       </section>
 
@@ -142,8 +143,8 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
     <div class="print-highlight-sub" id="printSubtitle"></div>
   </div>
   <div class="print-metrics">
-    <div class="print-metric"><span class="print-metric-label">Tiempo pendiente</span><strong id="printPending">—</strong><small>días calendario</small></div>
-    <div class="print-metric"><span class="print-metric-label">Tiempo desde cero</span><strong id="printBase">—</strong><small>días de referencia</small></div>
+    <div class="print-metric"><span class="print-metric-label">Tiempo pendiente</span><strong id="printPending">—</strong><small>según escenario elegido</small></div>
+    <div class="print-metric"><span class="print-metric-label">Tiempo desde cero</span><strong id="printBase">—</strong><small>duración base del trámite</small></div>
     <div class="print-metric"><span class="print-metric-label">Avance global</span><strong id="printProgress">—</strong><small>del trámite</small></div>
   </div>
   <div class="print-facts">
@@ -153,7 +154,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
     <div class="print-fact"><span class="print-fact-label">Fecha de referencia:</span><span class="print-fact-value" id="printReferenceDate"></span></div>
   </div>
   <div class="print-heading"><h2>Etapas y fechas estimadas</h2><span id="printStepCount"></span></div>
-  <table class="print-stage-table"><thead><tr><th>Etapa</th><th>Duración base</th><th>Días pendientes</th><th>Finalización</th></tr></thead><tbody id="printStageRows"></tbody></table>
+  <table class="print-stage-table"><thead><tr><th>Etapa</th><th>Duración base</th><th>Tiempo pendiente</th><th>Finalización</th></tr></thead><tbody id="printStageRows"></tbody></table>
   <div class="print-footer"><span>Estimación de planeación · 1 mes = 30 días calendario · Sin tiempo de respuesta del MEN posterior a radicación.</span><span>Universidad de La Sabana</span></div>
 </section>
 <script>
@@ -170,6 +171,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
    nuevo: {
      name: 'Programa nuevo',
      stages: [
+       ['Comisión de Facultad', 1],
        ['Prefactibilidad', 30],
        ['Alineación 3L / Admisiones', 30],
        ['Coherencia curricular', 60],
@@ -185,6 +187,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
    modificacion: {
      name: 'Modificación',
      stages: [
+       ['Comisión de Facultad', 1],
        ['Coherencia curricular', 60],
        ['Documento Maestro y anexos', 60],
        ['Subcomisión de Agilidad Curricular (SAC)', 30],
@@ -195,7 +198,8 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
    renovacion: {
      name: 'Renovación',
      stages: [
-       ['Autoevaluación', 60],
+       ['Comisión de Facultad', 1],
+       ['Autoevaluación y plan de mejoramiento', 60],
        ['Coherencia curricular', 60],
        ['Documento Maestro y anexos', 60],
        ['Radicación', 1]
@@ -227,7 +231,9 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
    const p=params.get('p'),m=params.get('m'),sc=params.get('s'),date=params.get('d'),st=Number(params.get('e')),co=Number(params.get('a'));
    if(processList[p])state.type=p;if(['start','progress'].includes(m))state.mode=m;if(scenarioFactors[sc])state.scenario=sc;
    if(/^\d{4}-\d{2}-\d{2}$/.test(date||'')){const parsed=parseDate(date);if(!isNaN(parsed))state.date=date;}
-   if(Number.isInteger(st))state.stage=Math.min(Math.max(st,0),processList[state.type].stages.length-1);
+   // Los enlaces previos no incluían Comisión de Facultad: se conserva su etapa original.
+   const migratedStage=params.get('v')==='2'?st:st+1;
+   if(Number.isInteger(st))state.stage=Math.min(Math.max(migratedStage,0),processList[state.type].stages.length-1);
    if(Number.isFinite(co))state.completion=Math.min(100,Math.max(0,Math.round(co/5)*5));
   }catch(err){/* Un enlace inválido no debe bloquear el simulador. */}
  }
@@ -266,7 +272,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
    const icon=node('span','step-icon',status==='done'?'✓':String(i+1).padStart(2,'0'));
    const title=node('span');title.appendChild(node('span','step-name',st[0]));
    title.appendChild(node('span','stage-state',status==='done'?'Finalizada':status==='current'?(state.mode==='start'?'Etapa inicial':i===state.stage?state.completion+' % de avance':'Etapa actual'):'Pendiente'));
-   const dur=node('span','step-duration',stageDurationLabel(st[1]));dur.appendChild(node('small',r.parts[i]===0?'0 días pendientes':number(r.dates[i].days)+' días estimados'));
+   const dur=node('span','step-duration',stageDurationLabel(st[1]));dur.appendChild(node('small',r.parts[i]===0?'Completada':'Estimado: '+stageDurationLabel(r.dates[i].days)));
    const finish=node('span','step-date',r.parts[i]===0?'Completada':shortDate(addDays(r.refDate,r.dates[i].day)));
    if(r.parts[i]!==0)finish.appendChild(node('small','Fecha estimada'));
    button.append(icon,title,dur,finish);li.appendChild(button);list.appendChild(li);
@@ -276,8 +282,8 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
  function renderPrintReport(r){
   $('printDate').textContent=longDate(r.finish);
   $('printSubtitle').textContent=r.p.name+' · '+scenarioNames[state.scenario];
-  $('printPending').textContent=number(r.pending);
-  $('printBase').textContent=number(r.base);
+  $('printPending').textContent=stageDurationLabel(r.pending);
+  $('printBase').textContent=stageDurationLabel(r.base);
   $('printProgress').textContent=r.pct+' %';
   $('printType').textContent=r.p.name;
   $('printScenario').textContent=scenarioNames[state.scenario];
@@ -288,7 +294,7 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
   const firstPending=r.parts.findIndex(d=>d>0);
   r.p.stages.forEach((st,i)=>{
    const tr=node('tr',r.parts[i]===0?'past':i===firstPending?'active':'');
-   const values=[String(i+1).padStart(2,'0')+' · '+st[0],stageDurationLabel(st[1]),r.parts[i]===0?'—':number(r.dates[i].days)+' días',r.parts[i]===0?'Completada':shortDate(addDays(r.refDate,r.dates[i].day))];
+   const values=[String(i+1).padStart(2,'0')+' · '+st[0],stageDurationLabel(st[1]),r.parts[i]===0?'—':stageDurationLabel(r.dates[i].days),r.parts[i]===0?'Completada':shortDate(addDays(r.refDate,r.dates[i].day))];
    values.forEach(v=>tr.appendChild(node('td',null,v)));
    tbody.appendChild(tr);
   });
@@ -297,14 +303,18 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
   const el=$('compareRows');el.replaceChildren();const max=Math.max(...Object.values(processList).map(totalDays));
   Object.entries(processList).forEach(([id,p])=>{const days=totalDays(p);const row=node('div','compare-row'+(id===state.type?' selected':''));
     const label=node('span','compare-label',p.name);const bar=node('div','compare-bar');const fill=node('span');fill.style.width=(days/max*100)+'%';bar.appendChild(fill);
-    const end=node('span','compare-num',days+' días');row.append(label,bar,end);el.appendChild(row)
+    const end=node('span','compare-num',stageDurationLabel(days));row.append(label,bar,end);el.appendChild(row)
   });
  }
  function render(){
   const r=calc();currentResult=r;setActiveButtons();
+  document.querySelectorAll('[data-type]').forEach(b=>{
+    const p=processList[b.dataset.type];
+    if(p){const info=b.querySelector('.type-info small');if(info)info.textContent=p.stages.length+' etapas · '+stageDurationLabel(totalDays(p));}
+  });
   $('estimatedDate').textContent=longDate(r.finish);$('scenarioTag').textContent=scenarioNames[state.scenario];
   $('resultSub').textContent=(state.mode==='start'?'Proyección desde el comienzo del proceso':'Proyección a partir de la etapa actual')+' · '+r.p.name;
-  $('daysLeft').textContent=number(r.pending);$('daysTotal').textContent=number(r.base);$('globalProgress').textContent=r.pct+' %';
+  $('daysLeft').textContent=stageDurationLabel(r.pending);$('daysTotal').textContent=stageDurationLabel(r.base);$('globalProgress').textContent=r.pct+' %';
   $('progressLead').textContent=r.pct+' % del trámite completado';$('stepsLead').textContent=r.stagesPending+' '+(r.stagesPending===1?'etapa pendiente':'etapas pendientes');
   $('globalProgressFill').style.width=r.pct+'%';$('globalProgressBar').setAttribute('aria-valuenow',String(r.pct));
   $('stageCount').textContent=r.p.stages.length+' etapas';
@@ -315,15 +325,15 @@ button:disabled{opacity:.5;cursor:not-allowed}.wrap{width:min(1150px,calc(100% -
   renderPrintReport(r);
  }
  function setFeedback(t){$('feedback').textContent=t;}
- function shareUrl(){const q=new URLSearchParams({p:state.type,m:state.mode,e:String(state.stage),a:String(state.completion),d:state.date,s:state.scenario});return location.href.split('#')[0]+'#'+q.toString()}
+ function shareUrl(){const q=new URLSearchParams({v:'2',p:state.type,m:state.mode,e:String(state.stage),a:String(state.completion),d:state.date,s:state.scenario});return location.href.split('#')[0]+'#'+q.toString()}
  function summary(){const r=currentResult;return[
    'SIMULADOR DE TIEMPOS · UNIVERSIDAD DE LA SABANA',
    'Proceso: '+r.p.name,
    'Inicio de la proyección: '+longDate(r.refDate),
    'Punto de partida: '+(state.mode==='start'?'Desde cero':r.p.stages[state.stage][0]+' ('+state.completion+' % de avance)'),
    'Escenario: '+scenarioNames[state.scenario],
-   'Tiempo pendiente: '+r.pending+' días calendario',
-   'Tiempo total de referencia: '+r.base+' días calendario',
+   'Tiempo pendiente: '+stageDurationLabel(r.pending),
+   'Tiempo total de referencia: '+stageDurationLabel(r.base),
    'Avance global: '+r.pct+' %',
    'Fecha estimada de radicación: '+longDate(r.finish),
    '', 'Estimación orientativa. 1 mes = 30 días calendario; sin festivos, cierres ni tiempos MEN posteriores a radicación.'
